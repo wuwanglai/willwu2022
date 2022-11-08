@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+int main()
+{
+	char input[20] = {0};
+	system("shutdown -s -t 60");//对应头文件<stdlib.h>
+	while (1)
+	{ 
+		printf("电脑将在一分钟内关机，如果输入：我是弟弟，就取消关机\n");
+	    scanf("%s", input);
+	     if (strcmp(input,"我是弟弟")==0)//strcmp函数与输入的信息比较
+	    {
+		       system("shutdown -a");//撤销关机命令
+			   break;//跳出while循环
+	    }
+	}
+   return 0;
+}	
